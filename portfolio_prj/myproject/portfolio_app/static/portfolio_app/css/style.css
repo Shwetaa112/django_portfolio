@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 0;
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+    background-color: #ffc107;
+    border-radius: 10px;
+    padding-left: 10px;
+    transition: 0.3s ease;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 190px;
+    margin-left: 20;
+    margin-bottom: 10px;
+
+}
+
+.social-links a {
+    margin-right: 10px;
+    margin-top:550px
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.social-links a:hover {
+    color: #ffc107;
+}
+
+/* Main Content */
+.main-content {
+    width: 95%;
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #000;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 40px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}

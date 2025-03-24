@@ -1,0 +1,138 @@
+<!--&lt;!&ndash; resume_list.html &ndash;&gt;-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Resumes</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Resumes</h1>-->
+<!--    <table border="1" cellpadding="10">-->
+<!--        <tr>-->
+<!--            <th>Resume Name</th>-->
+<!--            <th>Action</th>-->
+<!--        </tr>-->
+<!--        {% for resume in resumes %}-->
+<!--        <tr>-->
+<!--            <td>{{ resume.name }}</td>-->
+<!--            <td>-->
+<!--                {% if resume.resume_file %}-->
+<!--                    <a href="{{ resume.resume_file.url }}" target="_blank">View Resume</a>-->
+<!--                {% else %}-->
+<!--                    No file uploaded-->
+<!--                {% endif %}-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--    </table>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resumes - Shweta's Portfolio</title>
+    <link rel="stylesheet" href="/static/portfolio_app/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .main-content h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            color: #333;
+        }
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background: #f4f4f4;
+        }
+        td a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        td a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>SHWETA</h1>
+        <nav>
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'about' %}" class="nav-link">About</a>
+            <a href="{% url 'certificate' %}" class="nav-link">Certificate</a>
+            <a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="{% url 'resume_list' %}" class="nav-link active">Resumes</a>
+        </nav>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2025 Shweta Maurya</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Resumes</h1>
+        <table>
+            <tr>
+                <th>Resume Name</th>
+                <th>Action</th>
+            </tr>
+            {% for resume in resumes %}
+            <tr>
+                <td>{{ resume.name }}</td>
+                <td>
+                    {% if resume.resume_file %}
+                        <a href="{{ resume.resume_file.url }}" target="_blank">View Resume</a>
+                    {% else %}
+                        No file uploaded
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+
+<!--&lt;!&ndash;</html>&ndash;&gt;-->

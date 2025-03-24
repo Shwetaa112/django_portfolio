@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shweta's Portfolio</title>
+    <link rel="stylesheet" href="/static/portfolio_app/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>SHWETA</h1>
+        <nav>
+            <a href="#" class="nav-link active">Home</a>
+<!--            <a href="#" class="nav-link ">About</a>-->
+            <a href="{% url 'about' %}" class="nav-link">About</a>
+            <a href="{% url 'certificate' %}" class="nav-link">Certificate</a>
+            <a href="{% url 'resume_list' %}" class="nav-link">Resume Page</a>
+
+
+<!--            <a href="#" class="nav-link">Biography</a>-->
+            <a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a>
+            <a href="#" class="nav-link">Services</a>
+<!--            <a href="#" class="nav-link">Customers</a>-->
+<!--            <a href="#" class="nav-link">News & Tips</a>-->
+            <a href="#" class="nav-link">Contact</a>
+        </nav>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2025 shweta Maurya </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <img src="/static/portfolio_app/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h2 class="title">Python Developer</h2>
+        <p class="description">
+<!--            I’m a passionate Python Developer with 1.5 years of experience at <strong>Ekansh Technology</strong>, where I work on developing and maintaining scalable applications using Django.-->
+                I specialize in building efficient, reliable, and testable code, and have experience with deployment, debugging, and performance tuning.as a Freelancer.
+        </p>
+        <p class="signature">Felicia Anne</p>
+    </div>
+</div>
+
+</body>
+</html>
