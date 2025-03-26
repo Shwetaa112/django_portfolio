@@ -8,6 +8,10 @@ urlpatterns=[
     path('certificate/',views.certificate,name='certificate'),
     path('resume_list/', views.resume_list, name='resume_list'),
     path('certificate/delete/<int:cert_id>/', views.delete_certificate, name='delete_certificate'),
+    path('blog/',views.blog,name='blog'),
+    path('blog/<title>/',views.blog_details,name='blog_detail'),
+
+
 
 
 

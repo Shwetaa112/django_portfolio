@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
      'portfolio_app',
+      'ckeditor',
+     'ckeditor_uploader',
+     'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -129,5 +132,22 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+
+# CKEditor upload path (Relative to MEDIA_ROOT)
+CKEDITOR_UPLOAD_PATH = "uploads_app/"
+
+# CKEditor Configuration (Ensures Image Upload Works)
+CCKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'extraPlugins': ','.join([
+            'uploadimage',  # Enables direct image uploads_app
+        ]),
+        'filebrowserUploadUrl': '/ckeditor/upload/',  # URL for image upload
+        'filebrowserUploadMethod': 'post',  # Use POST method
+    },
+}
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

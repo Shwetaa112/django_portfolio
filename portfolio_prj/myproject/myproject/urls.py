@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('portfolio_app.urls')),
 
     path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
 if settings.DEBUG:
